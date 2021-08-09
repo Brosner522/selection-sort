@@ -8,26 +8,6 @@ if (require.main === module) {
   console.log(selectionSort([3, -1, 5, 2]));
 
   console.log("");
-
-  
-
-  // BENCHMARK HERE, and print the average runtime
-  const longInput = [];
-
-  for (let i = 0; i < 100; ++i) {
-    longInput.push(Math.random());
-  }
-
-  const startTime = Date.now();
-
-  for (let i = 0; i < 1000; ++i) {
-    selectionSort([2, 1]);
-    selectionSort(longInput);
-  }
-
-  const avgTime = (Date.now() - startTime) / 2000;
-
-  console.log(avgTime);
 }
 
 module.exports = selectionSort;
